@@ -22,7 +22,7 @@ module "aws_cloudwatch_event_target" {
 }
 
 
-module "aws_lambda_permission" {
+resource "aws_lambda_permission" "this"{
   source        = "../../modules/module_cloudwatch"
   statement_id  = var.statement_id
   action        = var.action
